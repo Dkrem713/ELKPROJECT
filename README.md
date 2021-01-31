@@ -81,12 +81,12 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - filebeat
 - metricbeat
-- packetbeat
+
 
 These Beats allow us to collect the following information from each machine:
 - 'filebeat' monitors files changes, which we use to collect logs of apache.
 - 'metricbeat' monitors metrics across the web server, which we use to check the status of the cpu/ram.
-- 'packetbeat' collects packets of the network, which we use to find suspicious traffic.
+
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -96,7 +96,7 @@ SSH into the control node and follow the steps below:
 - Update the playbook file to include the user name.
 - Run the playbook, and navigate to webserver/DVWA to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+
 - _Which file is the playbook? pentest.yml Where do you copy it?_ ansible folder
 - _Which file do you update to make Ansible run the playbook on a specific machine? pentest.yml How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ The private IPs
 - _Which URL do you navigate to in order to check that the ELK server is running? http://[my.VM.IP]:5601/app/kibana
