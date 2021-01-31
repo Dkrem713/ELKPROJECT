@@ -81,7 +81,7 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - filebeat
 - metricbeat
-- packetbeat
+
 
 These Beats allow us to collect the following information from each machine:
 - 'filebeat' monitors files changes, which we use to collect logs of apache.
