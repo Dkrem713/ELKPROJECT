@@ -38,7 +38,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
 | Web5     |   DVWA     | 10.0.0.13  | Linux        |                  |
 | Web4     |  DVWA        |  10.0.0.12 | Linux          |                  |
-| ELK2     |  Logging Data   | 10.1.0.4 | Linux        |                  |
+| ELK2     |  Logging Data   | 10.1.0.4 and 104.43.163.207 | Linux        |                  |
 
 ### Access Policies
 
@@ -55,9 +55,9 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes        | My public IP   |
-| Web4         | No       | 10.0.0.12 |
-|    Web5           | No    | 10.0.0.13 |
-|   ELK2       | Yes   | 10.1.0.4|
+| Web4         | No       | 10.0.0.1/24 |
+|    Web5           | No    | 10.0.0.1/24 |
+|   ELK2       | Yes   |10.0.0.1/24|
 
 
 ### Elk Configuration
@@ -99,9 +99,10 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to webserver/DVWA to check that the installation worked as expected.
 
 
-- _Which file is the playbook? pentest.yml Where do you copy it?_ ansible folder
-- _Which file do you update to make Ansible run the playbook on a specific machine? pentest.yml How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ The private IPs
-- _Which URL do you navigate to in order to check that the ELK server is running? http://[my.VM.IP]:5601/app/kibana
+- _Which file is the playbook? install-elk.yml Where do you copy it?_ ansible folder
+- _Which file do you update to make Ansible run the playbook on a specific machine? install-elk.yml How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ The private IPs
+- _Which URL do you navigate to in order to check that the ELK server is running? http://104.43.163.207:5601/app/kibana
+104.43.163.207 is my public ip of my ELK
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 ansible-playbook install_elk.yml elk
